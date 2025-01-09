@@ -1,0 +1,53 @@
+/* Card image animation */
+.card {
+  overflow: hidden;
+  /* Ensure the zoomed image does not overflow */
+}
+
+.card-img {
+  transition: transform 0.7s ease;
+  /* Smooth zoom effect */
+}
+
+.card:hover .card-img {
+  transform: scale(1.12);
+  /* Zoom in by 20% */
+}
+
+.menuicon i {
+  color: black;
+  /* Default icon color */
+  transition: color 0.3s ease;
+  /* Smooth transition */
+}
+
+.menuicon:hover i {
+  color: rgb(236, 50, 50);
+  /* Change this to the desired hover color */
+}
+
+.zoom-effect {
+  transition: transform 0.7s ease;
+  /* Smooth transition effect */
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+  /* Scales the image to 110% on hover */
+}
+
+.container .c-col:hover h5 {
+  text-decoration: underline;
+  cursor: pointer; /* Optional: indicates interactivity */
+}
+
+.icon:hover {
+  color: rgb(236, 50, 50);
+}
+
+.icon {
+  color: rgb(139, 138, 138);
+  /* Default icon color */
+  transition: color 0.3s ease;
+  /* Smooth transition */
+}

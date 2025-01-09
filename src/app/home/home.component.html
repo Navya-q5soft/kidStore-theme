@@ -1,0 +1,426 @@
+<div name="menubar" class="container-fluid d-flex align-items-center"
+    style="height: 100px; background-color: rgb(250, 232, 232);">
+    <div class="container-fluid row px-4 mx-auto" style="height: 90px;">
+        <div class="col-3 d-flex justify-content-start align-items-center">
+            <img src="assets/KSlogo.png" class="img-fluid w-50" alt="Logo">
+        </div>
+        <div class="col-7 d-flex justify-content-center align-items-center">
+            <a class="link-offset-2 link-offset-3-hover link-underline-dark text-dark link-underline-opacity-0 link-underline-opacity-75-hover fw-bold"
+                href="#"><i class="bi bi-house-door-fill"></i>Home
+            </a>&nbsp;&nbsp;
+            <a class="link-offset-2 link-offset-3-hover link-underline-dark text-dark link-underline-opacity-0 link-underline-opacity-75-hover fw-bold"
+                href="#">Elements
+            </a>&nbsp;&nbsp;
+            <a class="link-offset-2 link-offset-3-hover link-underline-dark text-dark link-underline-opacity-0 link-underline-opacity-75-hover fw-bold"
+                href="#">About Us
+            </a>&nbsp;&nbsp;
+            <a class="link-offset-2 link-offset-3-hover link-underline-dark text-dark link-underline-opacity-0 link-underline-opacity-75-hover fw-bold"
+                href="#" [routerLink]="['/shop']">Shop
+            </a>&nbsp;&nbsp;
+            <a class="link-offset-2 link-offset-3-hover link-underline-dark text-dark link-underline-opacity-0 link-underline-opacity-75-hover fw-bold"
+                href="#">Blog
+            </a>&nbsp;&nbsp;
+            <a class="link-offset-2 link-offset-3-hover link-underline-dark text-dark link-underline-opacity-0 link-underline-opacity-75-hover fw-bold"
+                href="#">Contact Us
+            </a>&nbsp;&nbsp;
+            <a class="link-offset-2 link-offset-3-hover link-underline-dark text-dark link-underline-opacity-0 link-underline-opacity-75-hover fw-bold"
+                href="#" [routerLink]="['/detail']">Buy Now
+            </a>
+        </div>
+        <div class="col-2 d-flex justify-content-end align-items-center">
+            <a class="menuicon p-2" href="#" style="scale: 1.20;">
+                <i class="bi bi-search"></i>
+            </a>
+            <a class="menuicon p-2" href="#" style="scale: 1.5;">
+                <i class="bi bi-person"></i>
+            </a>
+            <a class="menuicon p-2" href="#" style="scale: 1.20;">
+                <i class="bi bi-heart"></i>
+            </a>
+            <a class="menuicon p-2" href="#" style="scale: 1.20;">
+                <i class="bi bi-bag"></i>
+            </a>
+        </div>
+    </div>
+</div>
+<div name="offer_card"  *ngFor="let image of bannerData" class="container-fluid d-flex align-items-center px-5">
+    <div class="container-fluid card p-0 mt-5" style="border-radius: 0;">
+        <img class="card-img" src={{image}} alt="Card image" style="border-radius: 0;">
+        <div class="card-img-overlay d-flex justify-content-center">
+            <div class="ps-5 my-auto">
+                <h5 class="text-light d-flex justify-content-center">Eco-Friendly Packaging</h5>
+                <h1 class="text-light fw-bold d-flex justify-content-center">INTERACTIVE TOYS</h1>
+                <div class=" d-flex justify-content-center">
+                    <button href="#" class="btn btn-light px-5 py-2 fw-bold" style="border-radius: 20px;">Go To
+                        Shop</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div name="featured_heading" class="container-fluid px-5 mt-5 d-flex align-items-center">
+    <div class="container-fluid row p-0">
+        <div class="col-6 d-flex justify-content-start">
+            <h2>Featured Products</h2>
+        </div>
+        <div class="col-6 d-flex justify-content-end p-0">
+            <h5>View All Products <i class="bi bi-arrow-right"></i></h5>
+        </div>
+    </div>
+</div>
+<div name="featured_list" class="container-fluid px-5 mt-2 d-flex align-items-center">
+    <div class="row">
+        <div class="col-4">
+            <div class="card h-100 rounded- border-0">
+                <img class="card-img my-auto" src="assets/featured.jpg" alt="Card image" style="border-radius: 0;">
+                <div class="card-img-overlay d-flex justify-content-center mt-5">
+                    <div class="my-auto">
+                        <h1 class="text-light fw-bold d-flex justify-content-center">BUY 1 GET 1 FREE</h1>
+                        <div class="d-flex justify-content-center">
+                            <button href="#" class="btn btn-light btn-sm px-5 py-2 fw-bold"
+                                style="border-radius: 20px;">Grab Offer Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-8">
+            <div class="row">
+                <div *ngFor="let i of discountProduct" class="col-4">
+                    <div class="card rounded-0">
+                        <div class="container">
+                            <div class="card border-0">
+                                <img src={{i.Image}} class="card-img-top py-4 px-2" alt="Image" />
+                                <div class="card-img-overlay p-4 d-flex justify-content-end align-items-end">
+                                    <div class="pb-2">
+                                        <div class="row">
+                                            <i class="bi bi-heart fs-4 icon"></i>
+                                        </div>
+                                        <div class="row">
+                                            <i class="bi bi-cart fs-4 icon"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body text-start">
+                            <div class="container">
+                                <h5 class="card-title" style="height:40px">{{i.ProductName}}</h5>
+                            </div>
+                            <div class="container">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                            </div>
+                            <div class="container mt-2">
+                                <strong class="text-danger"><i class="bi bi-currency-rupee"></i>{{i.MRP}}</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div name="categories" class="container-fluid mt-5" style="background-color: rgb(219, 230, 241)">
+    <div class="row">
+        <h1 class="d-flex justify-content-center mt-5">Shop By Age</h1>
+    </div>
+    <div class="container mx-auto row px-5 mt-4">
+        <div class="col-2 c-col">
+            <img src="assets/c1.jpeg" class="img-fluid rounded-circle border bg-white p-1" alt="Image" />
+            <h5 class="d-flex justify-content-center mt-2">6-8 Years</h5>
+        </div>
+        <div class="col-2 c-col">
+            <img src="assets/c2.jpeg" class="img-fluid rounded-circle border bg-white p-1" alt="Image" />
+            <h5 class="d-flex justify-content-center mt-2">9-12 Years</h5>
+        </div>
+        <div class="col-2 c-col">
+            <img src="assets/c3.jpeg" class="img-fluid rounded-circle border bg-white p-1" alt="Image" />
+            <h5 class="d-flex justify-content-center mt-2">Boutique</h5>
+        </div>
+        <div class="col-2 c-col">
+            <img src="assets/c4.jpeg" class="img-fluid rounded-circle border bg-white p-1" alt="Image" />
+            <h5 class="d-flex justify-content-center mt-2">Diapering</h5>
+        </div>
+        <div class="col-2 c-col">
+            <img src="assets/c5.jpeg" class="img-fluid rounded-circle border bg-white p-1" alt="Image" />
+            <h5 class="d-flex justify-content-center mt-2">Nursering</h5>
+        </div>
+        <div class="col-2 c-col mb-5">
+            <img src="assets/c6.jpeg" class="img-fluid rounded-circle border bg-white p-1" alt="Image" />
+            <h5 class="d-flex justify-content-center mt-2">Older Kids</h5>
+        </div>
+    </div>
+</div>
+<div name="discount_offer" class="container-fluid d-flex align-items-center px-5 mt-5">
+    <div class="container-fluid row mx-auto py-4" style="background-color: rgb(219, 230, 241);">
+        <div class="col-5 d-flex justify-content-end">
+            <h5 class="my-auto">Super Discount For Your <strong>First Purchase</strong></h5>
+        </div>
+        <div class="col-2 d-flex justify-content-center">
+            <h5 class="my-auto" style="border: 2px dashed #000; padding: 5px;">FREE15FIRST</h5>
+        </div>
+        <div class="col-5 d-flex justify-content-start">
+            <p class="my-auto">Use Discount Code In Checkout!</p>
+        </div>
+    </div>
+</div>
+<div name="bestseller_heading" class="container-fluid px-5 mt-5 d-flex align-items-center">
+    <div class="container-fluid row p-0">
+        <div class="col-6 d-flex justify-content-start">
+            <h2>Best Seller Products</h2>
+        </div>
+        <div class="col-6 d-flex justify-content-end p-0">
+            <h5>View All Products <i class="bi bi-arrow-right"></i></h5>
+        </div>
+    </div>
+</div>
+<div name="bestseller_list" class="container-fluid d-flex align-items-center mt-3">
+    <div class="row row-cols-5 container-fluid px-4 mx-auto">
+        <div *ngFor=" let k of trendingProduct" class="col">
+            <div class="card rounded-0">
+                <div class="container">
+                    <div class="card border-0">
+                        <img src={{k.Image}} class="card-img-top py-4 px-2" alt="Image" />
+                        <div class="card-img-overlay p-4 d-flex justify-content-end align-items-end">
+                            <div class="pb-2">
+                                <div class="row">
+                                    <i class="bi bi-heart fs-4 icon"></i>
+                                </div>
+                                <div class="row">
+                                    <i class="bi bi-cart fs-4 icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body text-start">
+                    <div class="container">
+                        <h5 class="card-title" style="height:40px">{{k.ProductName}}</h5>
+                    </div>
+                    <div class="container">
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                    </div>
+                    <div class="container mt-2">
+                        <strong class="text-danger"><i class="bi bi-currency-rupee"></i>{{k.MRP}}</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="col">
+            <div class="card rounded-0">
+                <div class="container">
+                    <div class="card border-0">
+                        <img src="assets/b2.jpg" class="card-img-top py-4 px-2" alt="Image" />
+                        <div class="card-img-overlay p-4 d-flex justify-content-end align-items-end">
+                            <div class="pb-2">
+                                <div class="row">
+                                    <i class="bi bi-heart fs-4 icon"></i>
+                                </div>
+                                <div class="row">
+                                    <i class="bi bi-cart fs-4 icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body text-start">
+                    <div class="container">
+                        <h5 class="card-title" style="height:40px">Lattice Elephant Plush</h5>
+                    </div>
+                    <div class="container">
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                    </div>
+                    <div class="container mt-2">
+                        <strong class="text-danger">$313.50</strong>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- <div class="col">
+            <div class="card rounded-0">
+                <div class="container">
+                    <div class="card border-0">
+                        <img src="assets/b3.jpg" class="card-img-top py-4 px-2" alt="Image" />
+                        <div class="card-img-overlay p-4 d-flex justify-content-end align-items-end">
+                            <div class="pb-2">
+                                <div class="row">
+                                    <i class="bi bi-heart fs-4 icon"></i>
+                                </div>
+                                <div class="row">
+                                    <i class="bi bi-cart fs-4 icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body text-start">
+                    <div class="container">
+                        <h5 class="card-title" style="height:40px">Shaping Pillow Bambi</h5>
+                    </div>
+                    <div class="container">
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                    </div>
+                    <div class="container mt-2">
+                        <strong class="text-danger">$112.60</strong>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- <div class="col">
+            <div class="card rounded-0">
+                <div class="container">
+                    <div class="card border-0">
+                        <img src="assets/b4.jpg" class="card-img-top py-4 px-2" alt="Image" />
+                        <div class="card-img-overlay p-4 d-flex justify-content-end align-items-end">
+                            <div class="pb-2">
+                                <div class="row">
+                                    <i class="bi bi-heart fs-4 icon"></i>
+                                </div>
+                                <div class="row">
+                                    <i class="bi bi-cart fs-4 icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body text-start">
+                    <div class="container">
+                        <h5 class="card-title" style="height:40px">Fidlers Penguin Soft</h5>
+                    </div>
+                    <div class="container">
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                    </div>
+                    <div class="container mt-2">
+                        <strong class="text-danger">$120.00</strong>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- <div class="col">
+            <div class="card rounded-0">
+                <div class="container">
+                    <div class="card border-0">
+                        <img src="assets/related3.jpg" class="card-img-top py-4 px-2" alt="Image" />
+                        <div class="card-img-overlay p-4 d-flex justify-content-end align-items-end">
+                            <div class="pb-2">
+                                <div class="row">
+                                    <i class="bi bi-heart fs-4 icon"></i>
+                                </div>
+                                <div class="row">
+                                    <i class="bi bi-cart fs-4 icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body text-start">
+                    <div class="container">
+                        <h5 class="card-title" style="height:40px">Sister Jersey Tea</h5>
+                    </div>
+                    <div class="container">
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                    </div>
+                    <div class="container mt-2">
+                        <strong class="text-danger">$232.00</strong>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </div>
+</div>
+<div name="footer_card" class="container-fluid d-flex align-items-center mt-5 px-5"
+    style="background-color: rgb(250, 232, 232);">
+    <div class="container-fluid card mt-5 col-12 p-5 mx-auto">
+        <div name="related_products" class="row">
+            <div class="col-3 p-3">
+                <img src="assets/KSlogo.png" class="img-fluid w-50" alt="Logo">
+                <p>1418 River Drive, Suite 35 Cottonhall, CA 9622</p>
+                <a class="text-danger">SHOW ON MAP</a>
+                <div class="mt-2">
+                    <i class="bi bi-facebook"></i> &nbsp;
+                    <i class="bi bi-twitter"></i> &nbsp;
+                    <i class="bi bi-youtube"></i> &nbsp;
+                    <i class="bi bi-telegram"></i>
+                </div>
+            </div>
+            <div class="col-3 p-3">
+                <div class="row">
+                    <h4>Need Help?</h4>
+                    <h4 class="text-danger">+(84) - 1800 - 4635</h4>
+                    <p>
+                        Monday - Friday: 9:00-20:00
+                        Saturday: 11:00 - 15:00
+                    </p>
+                    <h4>contact@xstore.com</h4>
+                </div>
+            </div>
+            <div class="col-2 p-3">
+                <h4>Explore</h4>
+                <p class="mb-1">About Us</p>
+                <p class="mb-1">Sign In /Join</p>
+                <p class="mb-1">Site Map</p>
+                <p class="mb-1">Bookmarks</p>
+                <p class="mb-1">Vouchers</p>
+            </div>
+            <div class="col-2 p-3">
+                <h4>Our Services</h4>
+                <p class="mb-1">Help Center</p>
+                <p class="mb-1">Returns</p>
+                <p class="mb-1">Product Recalls</p>
+                <p class="mb-1">Accessibility</p>
+                <p class="mb-1">Contact Us</p>
+                <p class="mb-1">Store Pickup</p>
+            </div>
+            <div class="col-2 p-3">
+                <h4>Categories</h4>
+                <p class="mb-1">Fashion</p>
+                <p class="mb-1">Diapering</p>
+                <p class="mb-1">Gear & Toy</p>
+                <p class="mb-1">Bath & Nursery</p>
+                <p class="mb-1">Footwear</p>
+                <p class="mb-1">Boutiques</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div name="Newsletter" class="container-fluid d-flex px-4 align-items-center"
+    style="background-color: rgb(250, 232, 232);">
+    <div class="container-fluid row my-5 mx-auto">
+        <div class="col-3 d-flex justify-content-start">
+            <h3><i class="bi bi-envelope-paper text-danger"></i> &nbsp; Join Newsletter</h3>
+        </div>
+        <div class="col-5 d-flex justify-content-center p-0">
+            <p class="my-auto">Get the latest information and special offers!</p>
+        </div>
+        <div class="col-4 d-flex justify-content-end">
+            <div class="input-group">
+                <input type="email" class="form-control" placeholder="Enter your email" aria-label="Email">
+                <button class="btn btn-danger" type="button">Subscribe</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,446 @@
+<div name="menubar" class="container-fluid d-flex align-items-center"
+    style="height: 100px; background-color: rgb(250, 232, 232);">
+    <div class="container-fluid row px-4 mx-auto" style="height: 90px;">
+        <div class="col-3 d-flex justify-content-start align-items-center">
+            <img src="assets/KSlogo.png" class="img-fluid w-50" alt="Logo">
+        </div>
+        <div class="col-7 d-flex justify-content-center align-items-center">
+            <a class="link-offset-2 link-offset-3-hover link-underline-dark text-dark link-underline-opacity-0 link-underline-opacity-75-hover fw-bold"
+                href="#"><i class="bi bi-house-door-fill"></i>Home
+            </a>&nbsp;&nbsp;
+            <a class="link-offset-2 link-offset-3-hover link-underline-dark text-dark link-underline-opacity-0 link-underline-opacity-75-hover fw-bold"
+                href="#">Elements
+            </a>&nbsp;&nbsp;
+            <a class="link-offset-2 link-offset-3-hover link-underline-dark text-dark link-underline-opacity-0 link-underline-opacity-75-hover fw-bold"
+                href="#">About Us
+            </a>&nbsp;&nbsp;
+            <a class="link-offset-2 link-offset-3-hover link-underline-dark text-dark link-underline-opacity-0 link-underline-opacity-75-hover fw-bold"
+                href="#" [routerLink]="['/shop']">Shop
+            </a>&nbsp;&nbsp;
+            <a class="link-offset-2 link-offset-3-hover link-underline-dark text-dark link-underline-opacity-0 link-underline-opacity-75-hover fw-bold"
+                href="#">Blog
+            </a>&nbsp;&nbsp;
+            <a class="link-offset-2 link-offset-3-hover link-underline-dark text-dark link-underline-opacity-0 link-underline-opacity-75-hover fw-bold"
+                href="#">Contact Us
+            </a>&nbsp;&nbsp;
+            <a class="link-offset-2 link-offset-3-hover link-underline-dark text-dark link-underline-opacity-0 link-underline-opacity-75-hover fw-bold"
+                href="#" [routerLink]="['/detail']">Buy Now
+            </a>
+        </div>
+        <div class="col-2 d-flex justify-content-end align-items-center">
+            <a class="menuicon p-2" href="#" style="scale: 1.20;">
+                <i class="bi bi-search"></i>
+            </a>
+            <a class="menuicon p-2" href="#" style="scale: 1.5;">
+                <i class="bi bi-person"></i>
+            </a>
+            <a class="menuicon p-2" href="#" style="scale: 1.20;">
+                <i class="bi bi-heart"></i>
+            </a>
+            <a class="menuicon p-2" href="#" style="scale: 1.20;">
+                <i class="bi bi-bag"></i>
+            </a>
+        </div>
+    </div>
+</div>
+<div name="breadcrumbs" class="container-fluid d-flex align-items-center px-4" style="height: 50px;">
+    <div class="container-fluid row mx-auto">
+        <div class="col-8 d-flex justify-content-start">Home > Accessories > <strong>Orange Shoes</strong>
+        </div>
+        <div class="col-4 d-flex justify-content-end">
+            < Previous Page</div>
+        </div>
+    </div>
+    <div name="product_detail" class="container-fluid px-4">
+        <div *ngFor="let j of productDetails" class="container-fluid row mx-auto">
+            <div class="col-6 px-2">
+                <div class="mx-1">
+                    <div class="card">
+                        <img class="p-5 card-img w-70" src={{j.Image}} alt="Card image">
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 p-x-2">
+                <div class="mx-3">
+                    <div class="row">
+                        <h1 class="p-0">{{j.ProductName}}</h1>
+                    </div>
+                    <div class="row">
+                        <h6 class="p-0">
+                            {{j.CategoryName}}
+                        </h6>
+                    </div>
+                    <div class="row">
+                        <div class="p-0 col-12">
+                            <i class="bi bi-star-fill text-success"></i>
+                            <i class="bi bi-star-fill text-success"></i>
+                            <i class="bi bi-star-fill text-success"></i>
+                            <i class="bi bi-star-fill text-success"></i>
+                            <i class="bi bi-star-fill text-success"></i>
+                            (1 Customer Review)
+                        </div>
+                    </div>
+                    <div class="row mt-1">
+                        <div class="col-12 p-0">
+                            <i class="bi bi-eye"></i> 18 people are viewing this product right now
+                        </div>
+                    </div>
+                    <div class="row mt-1"> {{j.Description}}
+                    </div>
+                    <strong class="row mt-1">Estimated delivery: 3 days</strong>
+                    <div class="row mt-1">
+                        <h3 class="p-0"><i class="bi bi-currency-rupee"></i>{{j.MRP}}</h3>
+                    </div>
+                    <strong class="row">
+                        Buy More and Save More
+                    </strong>
+                </div>
+                <div class="mx-1 mt-1">
+                    <div class="col-12 card p-3">
+                        <div class="row">
+                            <div class="col-6">
+                                <strong>Buy 2 items get 5% OFF</strong>
+                                <div>on each product</div>
+                            </div>
+                            <div class="col-6 d-flex justify-content-end">
+                                <button class="btn btn-dark btn-sm px-5 py-0" style="border-radius: 25px;"><i
+                                        class="bi bi-bag"></i> Add to cart</button>
+                            </div>
+                        </div>
+                        <div class="border-top my-2 mx-3"></div>
+                        <div class="row">
+                            <div class="col-6">
+                                <strong>Buy 4 items get 10% OFF</strong>
+                                <div>on each product</div>
+                            </div>
+                            <div class="col-6 d-flex justify-content-end">
+                                <button class="btn btn-dark btn-sm px-5 py-0" style="border-radius: 25px;"><i
+                                        class="bi bi-bag"></i> Add to cart</button>
+                            </div>
+                        </div>
+                        <div class="border-top my-2 mx-3"></div>
+                        <div class="row">
+                            <div class="col-6">
+                                <strong>Buy 6 items get 15% OFF</strong>
+                                <div>on each product</div>
+                            </div>
+                            <div class="col-6 d-flex justify-content-end">
+                                <button class="btn btn-dark btn-sm px-5 py-0" style="border-radius: 25px;"><i
+                                        class="bi bi-bag"></i> Add to cart</button>
+                            </div>
+                        </div>
+                        <div class="border-top my-2 mx-3"></div>
+                        <div class="row">
+                            <div class="col-6">
+                                <strong>Buy 8 items get 20% OFF</strong>
+                                <div>on each product</div>
+                            </div>
+                            <div class="col-6 d-flex justify-content-end">
+                                <button class="btn btn-dark btn-sm px-5 py-0" style="border-radius: 25px;"><i
+                                        class="bi bi-bag"></i>
+                                    Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mx-3 mt-2">
+                    <div class="row d-flex justify-content-between">
+                        <div class="col-2 border rounded">
+                            <div class="mt-1 d-flex justify-content-around">
+                                1 <i class="bi-chevron-down"></i>
+                            </div>
+                        </div>
+                        <button class="btn btn-danger col-9" style="border-radius: 25px;">
+                            <i class="bi bi-bag"></i> Add to Cart
+                        </button>
+                    </div>
+                    <div class="row mt-1">
+                        <div class="col-12 d-flex align-items-center">
+                            <hr class="flex-grow-1">
+                            <span class="px-3">OR</span>
+                            <hr class="flex-grow-1">
+                        </div>
+                    </div>
+                    <div class="row mt-1">
+                        <button class="col-12 btn btn-dark" style="border-radius: 25px;">
+                            <i class="bi bi-wallet"></i> Buy Now
+                        </button>
+                    </div>
+                    <div class="row mt-1 d-flex align-items-center">
+                        <div class="col-3">
+                            <h6 class="row"><i class="bi bi-heart text-danger d-flex justify-content-center mt-2"></i>
+                            </h6>
+                            <h6 class="row d-flex justify-content-center">Add to Wishlist</h6>
+                        </div>
+                        <div class="col-3">
+                            <h6 class="row"><strong class="d-flex justify-content-center mt-2">SKU: </strong></h6>
+                            <h6 class="row d-flex justify-content-center">87611</h6>
+                        </div>
+                        <div class="col-3">
+                            <h6 class="row"><strong class="d-flex justify-content-center mt-2">Categories: </strong>
+                            </h6>
+                            <h6 class="row d-flex justify-content-center">Footwear</h6>
+                        </div>
+                        <div class="col-3">
+                            <h6 class="row"><strong class="d-flex justify-content-center mt-2">Tags: </strong> </h6>
+                            <h6 class="row d-flex justify-content-center">Accessories, Orange</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h5 class="p-0 d-flex justify-content-center mb-0 mt-5">
+        <span class="btn px-5 py-2 fw-bold"
+            style="background-color: rgb(219, 230, 241); border-radius: 15px 15px 0 0;">Description</span>
+    </h5>
+    <div class="container-fluid px-5">
+        <div name="product_description" class="container-fluid rounded" style="background-color: rgb(219, 230, 241);">
+            <h3 class="row d-flex justify-content-center p-2">A perfect companion toy for your child
+                <span class="row d-flex justify-content-center"> to play along, or sleep</span>
+            </h3>
+            <div class=" row d-flex justify-content-center py-5">
+                <div class="col-5 my-auto">
+                    <div class="row px-5">
+                        <h2 class="mb-3">Key Features:</h2>
+                        <li class="mb-3">The finest materials to give cuddly comfort</li>
+                        <li class="mb-3">Made of super non-toxic, soft poly fiber inside</li>
+                        <li class="mb-3">Great choice as a companion for children</li>
+                        <li class="mb-3">Very soft and adorable, makes for a great gift</li>
+                        <li class="mb-3">Toy comes with bag which can be used to store</li>
+                    </div>
+                    <div class="row px-5 mt-5">
+                        <h2 class="mb-3">Specifications:</h2>
+                        <li class="mb-3">Type - Soft Cuddling Toy</li>
+                        <li class="mb-3">Age - 2 Years or More</li>
+                        <li class="mb-3">Size - 65 cm * 23 cm</li>
+                        <li class="mb-3">Material - 100 % Polyester fiber</li>
+                        <li class="mb-3">Filler material - 100 Polyester fur</li>
+                        <li class="mb-3">Package Dimension - L 32 x B 23 x H 17 cm</li>
+                    </div>
+                </div>
+                <div class="col-5 p-0">
+                    <div class="mx-1 py-2">
+                        <div class="card">
+                            <img class="card-img w-70" src="assets/doll2.jpg" alt="Card image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div name="related_products_heading" class="container-fluid mt-5">
+        <h3 class="row d-flex justify-content-center">Related Products</h3>
+    </div>
+    <div name="related_listing" class="container-fluid d-flex align-items-center mt-3">
+        <div class="row row-cols-4 container-fluid px-4 mx-auto">
+            <div class="col">
+                <div class="card rounded-0">
+                    <div class="container">
+                        <div class="card border-0">
+                            <img src="assets/related1.jpg" class="card-img-top py-4 px-2" alt="Image" />
+                            <div class="card-img-overlay p-4 d-flex justify-content-end align-items-end">
+                                <div class="pb-2">
+                                    <div class="row">
+                                        <i class="bi bi-heart fs-4 icon"></i>
+                                    </div>
+                                    <div class="row">
+                                        <i class="bi bi-cart fs-4 icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body text-start">
+                        <div class="container">
+                            <h5 class="card-title" style="height:40px">Toy Set</h5>
+                        </div>
+                        <div class="container">
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star text-warning"></i>
+                        </div>
+                        <div class="container mt-2">
+                            <strong class="card-price">$115</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card rounded-0">
+                    <div class="container">
+                        <div class="card border-0">
+                            <img src="assets/related2.jpg" class="card-img-top py-4 px-2" alt="Image" />
+                            <div class="card-img-overlay p-4 d-flex justify-content-end align-items-end">
+                                <div class="pb-2">
+                                    <div class="row">
+                                        <i class="bi bi-heart fs-4 icon"></i>
+                                    </div>
+                                    <div class="row">
+                                        <i class="bi bi-cart fs-4 icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body text-start">
+                        <div class="container">
+                            <h5 class="card-title" style="height:40px">Pink Shoes</h5>
+                        </div>
+                        <div class="container">
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star text-warning"></i>
+                        </div>
+                        <div class="container mt-2">
+                            <strong class="card-price">$123</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card rounded-0">
+                    <div class="container">
+                        <div class="card border-0">
+                            <img src="assets/related3.jpg" class="card-img-top py-4 px-2" alt="Image" />
+                            <div class="card-img-overlay p-4 d-flex justify-content-end align-items-end">
+                                <div class="pb-2">
+                                    <div class="row">
+                                        <i class="bi bi-heart fs-4 icon"></i>
+                                    </div>
+                                    <div class="row">
+                                        <i class="bi bi-cart fs-4 icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body text-start">
+                        <div class="container">
+                            <h5 class="card-title" style="height:40px">Piano</h5>
+                        </div>
+                        <div class="container">
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                        </div>
+                        <div class="container mt-2">
+                            <strong class="card-price">$150</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card rounded-0">
+                    <div class="container">
+                        <div class="card border-0">
+                            <img src="assets/related4.jpg" class="card-img-top py-4 px-2" alt="Image" />
+                            <div class="card-img-overlay p-4 d-flex justify-content-end align-items-end">
+                                <div class="pb-2">
+                                    <div class="row">
+                                        <i class="bi bi-heart fs-4 icon"></i>
+                                    </div>
+                                    <div class="row">
+                                        <i class="bi bi-cart fs-4 icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body text-start">
+                        <div class="container">
+                            <h5 class="card-title" style="height:40px">Sheet</h5>
+                        </div>
+                        <div class="container">
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star text-warning"></i>
+                            <i class="bi bi-star text-warning"></i>
+                        </div>
+                        <div class="container mt-2">
+                            <strong class="card-price">$20</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div name="footer_card" class="container-fluid d-flex align-items-center px-5 mt-5"
+        style="background-color: rgb(250, 232, 232);">
+        <div class="container-fluid card mt-5 col-12 p-5 mx-auto">
+            <div name="related_products" class="row">
+                <div class="col-3 p-3">
+                    <img src="assets/KSlogo.png" class="img-fluid w-50" alt="Logo">
+                    <p>1418 River Drive, Suite 35 Cottonhall, CA 9622</p>
+                    <a class="text-danger">SHOW ON MAP</a>
+                    <div class="mt-2">
+                        <i class="bi bi-facebook"></i> &nbsp;
+                        <i class="bi bi-twitter"></i> &nbsp;
+                        <i class="bi bi-youtube"></i> &nbsp;
+                        <i class="bi bi-telegram"></i>
+                    </div>
+                </div>
+                <div class="col-3 p-3">
+                    <div class="row">
+                        <h4>Need Help?</h4>
+                        <h4 class="text-danger">+(84) - 1800 - 4635</h4>
+                        <p>
+                            Monday - Friday: 9:00-20:00
+                            Saturday: 11:00 - 15:00
+                        </p>
+                        <h4>contact@xstore.com</h4>
+                    </div>
+                </div>
+                <div class="col-2 p-3">
+                    <h4>Explore</h4>
+                    <p class="mb-1">About Us</p>
+                    <p class="mb-1">Sign In /Join</p>
+                    <p class="mb-1">Site Map</p>
+                    <p class="mb-1">Bookmarks</p>
+                    <p class="mb-1">Vouchers</p>
+                </div>
+                <div class="col-2 p-3">
+                    <h4>Our Services</h4>
+                    <p class="mb-1">Help Center</p>
+                    <p class="mb-1">Returns</p>
+                    <p class="mb-1">Product Recalls</p>
+                    <p class="mb-1">Accessibility</p>
+                    <p class="mb-1">Contact Us</p>
+                    <p class="mb-1">Store Pickup</p>
+                </div>
+                <div class="col-2 p-3">
+                    <h4>Categories</h4>
+                    <p class="mb-1">Fashion</p>
+                    <p class="mb-1">Diapering</p>
+                    <p class="mb-1">Gear & Toy</p>
+                    <p class="mb-1">Bath & Nursery</p>
+                    <p class="mb-1">Footwear</p>
+                    <p class="mb-1">Boutiques</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div name="Newsletter" class="container-fluid d-flex px-4 align-items-center"
+        style="background-color: rgb(250, 232, 232);">
+        <div class="container-fluid row my-5 mx-auto">
+            <div class="col-3 d-flex justify-content-start">
+                <h3><i class="bi bi-envelope-paper text-danger"></i> &nbsp; Join Newsletter</h3>
+            </div>
+            <div class="col-5 d-flex justify-content-center p-0">
+                <p class="my-auto">Get the latest information and special offers!</p>
+            </div>
+            <div class="col-4 d-flex justify-content-end">
+                <div class="input-group">
+                    <input type="email" class="form-control" placeholder="Enter your email" aria-label="Email">
+                    <button class="btn btn-danger" type="button">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </div>

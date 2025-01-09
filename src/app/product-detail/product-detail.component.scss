@@ -1,0 +1,22 @@
+.menuicon i {
+  color: black;
+  /* Default icon color */
+  transition: color 0.3s ease;
+  /* Smooth transition */
+}
+
+.menuicon:hover i {
+  color: rgb(236, 50, 50);
+  /* Change this to the desired hover color */
+}
+
+.icon:hover {
+  color: rgb(236, 50, 50);
+}
+
+.icon {
+  color: rgb(139, 138, 138);
+  /* Default icon color */
+  transition: color 0.3s ease;
+  /* Smooth transition */
+}

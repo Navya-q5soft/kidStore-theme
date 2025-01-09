@@ -1,0 +1,236 @@
+<div name="menubar" class="container-fluid d-flex align-items-center"
+  style="height: 100px; background-color: rgb(250, 232, 232);">
+  <div class="container-fluid row px-4 mx-auto" style="height: 90px;">
+    <div class="col-3 d-flex justify-content-start align-items-center">
+      <img src="assets/KSlogo.png" class="img-fluid w-50" alt="Logo">
+    </div>
+    <div class="col-7 d-flex justify-content-center align-items-center">
+      <a class="link-offset-2 link-offset-3-hover link-underline-dark text-dark link-underline-opacity-0 link-underline-opacity-75-hover fw-bold"
+        href="#"><i class="bi bi-house-door-fill"></i>Home
+      </a>&nbsp;&nbsp;
+      <a class="link-offset-2 link-offset-3-hover link-underline-dark text-dark link-underline-opacity-0 link-underline-opacity-75-hover fw-bold"
+        href="#">Elements
+      </a>&nbsp;&nbsp;
+      <a class="link-offset-2 link-offset-3-hover link-underline-dark text-dark link-underline-opacity-0 link-underline-opacity-75-hover fw-bold"
+        href="#">About Us
+      </a>&nbsp;&nbsp;
+      <a class="link-offset-2 link-offset-3-hover link-underline-dark text-dark link-underline-opacity-0 link-underline-opacity-75-hover fw-bold"
+        href="#" [routerLink]="['/shop']">Shop
+      </a>&nbsp;&nbsp;
+      <a class="link-offset-2 link-offset-3-hover link-underline-dark text-dark link-underline-opacity-0 link-underline-opacity-75-hover fw-bold"
+        href="#">Blog
+      </a>&nbsp;&nbsp;
+      <a class="link-offset-2 link-offset-3-hover link-underline-dark text-dark link-underline-opacity-0 link-underline-opacity-75-hover fw-bold"
+        href="#">Contact Us
+      </a>&nbsp;&nbsp;
+      <a class="link-offset-2 link-offset-3-hover link-underline-dark text-dark link-underline-opacity-0 link-underline-opacity-75-hover fw-bold"
+        href="#" [routerLink]="['/detail']">Buy Now
+      </a>
+    </div>
+    <div class="col-2 d-flex justify-content-end align-items-center">
+      <a class="menuicon p-2" href="#" style="scale: 1.20;">
+        <i class="bi bi-search"></i>
+      </a>
+      <a class="menuicon p-2" href="#" style="scale: 1.5;">
+        <i class="bi bi-person"></i>
+      </a>
+      <a class="menuicon p-2" href="#" style="scale: 1.20;">
+        <i class="bi bi-heart"></i>
+      </a>
+      <a class="menuicon p-2" href="#" style="scale: 1.20;">
+        <i class="bi bi-bag"></i>
+      </a>
+    </div>
+  </div>
+</div>
+<div name="offer_card" class="container-fluid d-flex align-items-center px-5">
+  <div class="container-fluid card p-0 mt-5">
+    <img class="card-img" src="assets/offerBG.jpg" alt="Card image">
+    <div class="card-img-overlay  d-flex align-items-center">
+      <div class="ps-5">
+        <h5 class="text-light">Buy 2 Get 1 + Shipping Free*</h5>
+        <h1 class="text-light fw-bold">CHRISTMAS OFFER</h1>
+        <a href="#" class="btn btn-light px-5 py-2 fw-bold" style="border-radius: 20px;">Grab Offer</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div name="page_description" class="container-fluid px-5">
+  <div class="my-3">
+    <h1 class="row d-flex justify-content-center">The Shop</h1>
+    <p class="row d-flex justify-content-center">Discover a magical world of kids' fashion, toys, and essentials!
+      <span class="row d-flex justify-content-center">
+        Shop our fun and colorful collection designed to spark joy and creativity in every child.
+      </span>
+    </p>
+  </div>
+</div>
+<div name="filter_bar" class="container-fluid row px-5 mx-auto mt-5">
+  <div class="col-9">
+    <div class="row border p-2" style="border-radius: 20px;">
+      <div class="col-2 d-flex justify-content-between">
+        <p class="my-auto">All Categoriezs</p>
+        <i class="bi bi-chevron-down"></i>
+      </div>
+      <div class="col-1 d-flex align-items-center">
+        <div class="separator"></div>
+      </div>
+      <div class="col-2 d-flex justify-content-between">
+        <p class="my-auto">Select Brand</p>
+        <i class="bi bi-chevron-down"></i>
+      </div>
+      <div class="col-1 d-flex align-items-center">
+        <div class="separator"></div>
+      </div>
+      <div class="col-2 d-flex justify-content-between">
+        <p class="my-auto">Price Range</p>
+        <i class="bi bi-chevron-down"></i>
+      </div>
+      <div class="col-1 d-flex align-items-center">
+        <div class="separator"></div>
+      </div>
+      <div class="col-2 d-flex justify-content-between">
+        <p class="my-auto">Select Rating</p>
+        <i class="bi bi-chevron-down"></i>
+      </div>
+    </div>
+  </div>
+  <div class="col-3 d-flex justify-content-end">
+    <button class="btn btn-danger px-5" style="border-radius: 20px;">Search <i class="bi bi-search"></i>
+    </button>
+  </div>
+</div>
+<div name="sort_and_view" class="container-fluid row px-5 mx-auto mt-5">
+  <div class="col-2 border d-flex justify-content-center" style="border-radius: 15px;;">
+    <p class="mt-3">Default Sorting</p>
+  </div>
+  <div class="col-3">
+    <div class="row mt-3">
+      <div class="col-1">
+        <i class="bi bi-grid"></i>
+      </div>
+      <div class="col-1">
+        <div class="separator"></div>
+      </div>
+      <div class="col-1">
+        <i class="bi bi-grid-3x3-gap"></i>
+      </div>
+      <div class="col-1">
+        <div class="separator"></div>
+      </div>
+      <div class="col-1">
+        <i class="bi bi-list-task"></i>
+      </div>
+    </div>
+  </div>
+</div>
+<div  name="product_listing" class="container-fluid d-flex align-items-center mt-5">
+  <div class="row row-cols-4 container-fluid px-4 mx-auto">
+    <div   *ngFor="let items of products" class="col ">
+      <div class="card rounded-0">
+        <div class="container">
+          <div class="card border-0">
+            <img src={{items.Image}} class="card-img-top py-4 px-2" alt="Image" />
+            <div class="card-img-overlay p-4 d-flex justify-content-end align-items-end">
+              <div class="pb-2">
+                <div class="row">
+                  <i class="bi bi-heart fs-4 icon"></i>
+                </div>
+                <div class="row">
+                  <i class="bi bi-cart fs-4 icon"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-body text-start">
+          <div class="container">
+            <h5 class="card-title" style="height:40px">{{items.ProductName}}</h5>
+          </div>
+          <div class="container">
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+          </div>
+          <div class="container mt-2">
+            <strong class="text-danger"><i class="bi bi-currency-rupee"></i>{{items.MRP}}</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div name="footer_card" class="container-fluid d-flex align-items-center px-5 mt-5"
+  style="background-color: rgb(250, 232, 232);">
+  <div class="container-fluid card mt-5 col-12 p-5 mx-auto">
+    <div name="related_products" class="row">
+      <div class="col-3 p-3">
+        <img src="assets/KSlogo.png" class="img-fluid w-50" alt="Logo">
+        <p>1418 River Drive, Suite 35 Cottonhall, CA 9622</p>
+        <a class="text-danger">SHOW ON MAP</a>
+        <div class="mt-2">
+          <i class="bi bi-facebook"></i> &nbsp;
+          <i class="bi bi-twitter"></i> &nbsp;
+          <i class="bi bi-youtube"></i> &nbsp;
+          <i class="bi bi-telegram"></i>
+        </div>
+      </div>
+      <div class="col-3 p-3">
+        <div class="row">
+          <h4>Need Help?</h4>
+          <h4 class="text-danger">+(84) - 1800 - 4635</h4>
+          <p>
+            Monday - Friday: 9:00-20:00
+            Saturday: 11:00 - 15:00
+          </p>
+          <h4>contact@xstore.com</h4>
+        </div>
+      </div>
+      <div class="col-2 p-3">
+        <h4>Explore</h4>
+        <p class="mb-1">About Us</p>
+        <p class="mb-1">Sign In /Join</p>
+        <p class="mb-1">Site Map</p>
+        <p class="mb-1">Bookmarks</p>
+        <p class="mb-1">Vouchers</p>
+      </div>
+      <div class="col-2 p-3">
+        <h4>Our Services</h4>
+        <p class="mb-1">Help Center</p>
+        <p class="mb-1">Returns</p>
+        <p class="mb-1">Product Recalls</p>
+        <p class="mb-1">Accessibility</p>
+        <p class="mb-1">Contact Us</p>
+        <p class="mb-1">Store Pickup</p>
+      </div>
+      <div class="col-2 p-3">
+        <h4>Categories</h4>
+        <p class="mb-1">Fashion</p>
+        <p class="mb-1">Diapering</p>
+        <p class="mb-1">Gear & Toy</p>
+        <p class="mb-1">Bath & Nursery</p>
+        <p class="mb-1">Footwear</p>
+        <p class="mb-1">Boutiques</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div name="Newsletter" class="container-fluid d-flex px-4 align-items-center"
+  style="background-color: rgb(250, 232, 232);">
+  <div class="container-fluid row my-5 mx-auto">
+    <div class="col-3 d-flex justify-content-start">
+      <h3><i class="bi bi-envelope-paper text-danger"></i> &nbsp; Join Newsletter</h3>
+    </div>
+    <div class="col-5 d-flex justify-content-center p-0">
+      <p class="my-auto">Get the latest information and special offers!</p>
+    </div>
+    <div class="col-4 d-flex justify-content-end">
+      <div class="input-group">
+        <input type="email" class="form-control" placeholder="Enter your email" aria-label="Email">
+        <button class="btn btn-danger" type="button">Subscribe</button>
+      </div>
+    </div>
+  </div>
+</div>
