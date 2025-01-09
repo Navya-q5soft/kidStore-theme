@@ -40,6 +40,13 @@ export class ApiService {
     });
     return this.http.post('https://bazaarnear.in/ecomapi/api/Products/GetProductsForCustomer',detail,{headers})
   }
+
+  getFeaturedproduct(product:any):Observable<any>{
+    const headers = new HttpHeaders({
+      'content-type': 'application.json'
+    });
+    return this.http.post('https://bazaarnear.in/ecomapi/api/Products/GetFeaturedProducts',product,{headers})
+  }
  
   getImageData(datas: { OfferFor: string, SellerId: number }): Observable<any> {
     const params = new HttpParams()

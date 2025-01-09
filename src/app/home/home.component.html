@@ -43,7 +43,73 @@
         </div>
     </div>
 </div>
-<div name="offer_card"  *ngFor="let image of bannerData" class="container-fluid d-flex align-items-center px-5">
+
+<div id="bannerCarousel" class="carousel slide" data-bs-ride="carousel">
+    <!-- Indicators -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    </div>
+  
+    <!-- Carousel Items -->
+    <div class="carousel-inner">
+      <div
+        name="offer_card"
+        *ngFor="let image of bannerData; let i = index"
+        class="carousel-item"
+        [class.active]="i === 0" >
+        <div class="container-fluid d-flex align-items-center px-5">
+          <div class="container-fluid card p-0 mt-5" style="border-radius: 0;height: 550px;">
+            <img
+              class="card-img"
+              [src]="image"
+              alt="Card image"
+              style="border-radius: 0;" />
+            <div class="card-img-overlay d-flex justify-content-center">
+              <div class="ps-5 my-auto">
+                <h5 class="text-light d-flex justify-content-center">
+                  Eco-Friendly Packaging
+                </h5>
+                <h1 class="text-light fw-bold d-flex justify-content-center">
+                  INTERACTIVE TOYS
+                </h1>
+                <div class="d-flex justify-content-center">
+                  <button
+                    class="btn btn-light px-5 py-2 fw-bold"
+                    style="border-radius: 20px;">
+                    Go To Shop
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Carousel Controls -->
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#bannerCarousel"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#bannerCarousel"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+</div>
+  
+
+<!-- <div name="offer_card"  *ngFor="let image of bannerData" class="container-fluid d-flex align-items-center px-5">
     <div class="container-fluid card p-0 mt-5" style="border-radius: 0;">
         <img class="card-img" src={{image}} alt="Card image" style="border-radius: 0;">
         <div class="card-img-overlay d-flex justify-content-center">
@@ -57,7 +123,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <div name="featured_heading" class="container-fluid px-5 mt-5 d-flex align-items-center">
     <div class="container-fluid row p-0">
         <div class="col-6 d-flex justify-content-start">

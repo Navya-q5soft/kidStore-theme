@@ -10,13 +10,15 @@ export class HomeComponent implements OnInit {
  discountProduct : any;
  trendingProduct:any;
  bannerData: any = null;
+ featureproduct:any;
 
   constructor(private apiService: ApiService){}
 
   ngOnInit(): void {
     this.getDiscountProduct();
     this.getTrendingProduct();
-    this.getBanner()
+    this.getBanner();
+    this.getFeaturedproduct();
   }
 
   getDiscountProduct():void{
@@ -53,6 +55,26 @@ export class HomeComponent implements OnInit {
     this.apiService.getTrendingProduct(sendingData).subscribe({
       next :( response)=>{
         this.trendingProduct = response.ResponseData;
+      },
+      error: (error) => {
+        console.error('API Error:', error);
+      },
+    })
+  }
+
+  getFeaturedproduct():void{
+    let product = {
+      "sellerID": "109",
+    "forAdmin": true,
+    "organisationID": 0,
+    "takeAll": true,
+    "skip": 0,
+    "take": 0
+    }
+    this.apiService.getFeaturedproduct(product).subscribe({
+      next:(Response)=>{
+           this.featureproduct = Response.ResponseData;
+           console.log(this.featureproduct);
       },
       error: (error) => {
         console.error('API Error:', error);
